@@ -7,7 +7,70 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Eval Layout</title>
-		<link rel="stylesheet" href="css/style.css">
+        <style>
+            .txtcenter {
+                text-align: center;
+            }
+
+            .desktop, .tablette, .telephone {
+                display: none;
+            }
+
+            .flex {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .flex > div {
+                width: 20%;
+                padding: 5px;
+            }
+
+            .flex > div > img {
+                width: 100%;
+            }
+
+            @media (max-width: 1370px) {
+                .desktop {
+                    display: block;
+                }
+                .desktopG {
+                    display: none;
+                }
+                .flex > div {
+                    width: 40%;
+                }
+            }
+
+            @media (max-width: 970px) {
+                .tablette {
+                    display: block;
+                }
+
+                .desktop {
+                    display: none;
+                }
+
+                .flex > div {
+                    width: 45%;
+                }
+            }
+
+            @media (max-width: 767px) {
+                .telephone {
+                    display: block;
+                }
+
+                .tablette {
+                    display: none;
+                }
+
+                .flex > div {
+                    width: 90%;
+                }
+            }
+        </style>
 	</head>
 	<body>
 		<h1 class="txtcenter">Evaluation  Layout</h1>
@@ -15,7 +78,12 @@
 		<h2 class="desktop txtcenter">Vue Desktop</h2>
 		<h2 class="tablette txtcenter">Vue Tablette à 768px à 970px</h2>
 		<h2 class="telephone txtcenter">Vue Téléphone à 320px</h2>
-
+        <div class="flex">
+            <div class="mer"><img src="img/mer.jpg" alt="mer"></div>
+            <div class="lac"><img src="img/lac.jpg" alt="lac"></div>
+            <div class="montagne"><img src="img/montagne.jpg" alt="montagne"></div>
+            <div class="foret"><img src="img/foret.jpg" alt="foret"></div>
+        </div>
 
 
 	</body>
